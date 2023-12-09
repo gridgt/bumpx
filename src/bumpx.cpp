@@ -948,8 +948,8 @@ int UnpackBump(int argc, Char** argv) {
         const float eY = scast<float>(bumpX.pixels[i].g) / 255.0f;
         const float eZ = scast<float>(bumpX.pixels[i].b) / 255.0f;
 
-        float NX = nX + (eX - 1.0f);
-        float NY = nY + (eY - 1.0f);
+        float NX = nX
+        float NY = nY + (eY + (eY - 1.0f));
         float NZ = nZ + (eZ - 1.0f);
 
         const float il = 1.0f / std::sqrt(NX * NX + NY * NY + NZ * NZ);
